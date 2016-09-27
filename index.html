@@ -42,16 +42,56 @@
 								<ul>
 									<li>Light status</li>
 									<li><span>LED</span><a href="#">%</a></li>
-									<li><span>Ambient light</span><a href="#">on</a></li>
+									<li><span>Tempering</span><a href="#">on</a></li>
+									<li><span>Temperature</span><a href="#">on</a></li>
+									<li><span>Digital input</span><a href="#">on</a></li>
 								</ul>
 							</li>
-<!-- 							<li>
+							<li>
 								<ul>
 									<li>Manual control</li>
-									<li><span>LED</span><a href="#">%</a></li>
-									<li><span>Ambient light</span><a href="#">on</a></li>
+									<li><span>LED</span>
+										<a href="#">
+											<label class="switch">
+											  <input type="checkbox">
+											  <div class="slider round"></div>
+											</label>
+										</a>
+									</li>
+									<li><span>Energy save</span>
+										<a href="#">											
+											<label class="switch">
+											  <input type="checkbox">
+											  <div class="slider round"></div>
+											</label>
+										</a>
+									</li>
+									<li><span>Boost</span>
+										<a href="#">
+											<label class="switch">
+											  <input type="checkbox">
+											  <div class="slider round"></div>
+											</label>
+										</a>
+									</li>
+									<li><span>Strobe</span>
+										<a href="#">
+										    <label class="switch">
+											  <input type="checkbox">
+											  <div class="slider round"></div>
+											</label>
+										</a>
+									</li>									
+									<li><span>Digital output</span>
+										<a href="#">
+										    <label class="switch">
+											  <input type="checkbox">
+											  <div class="slider round"></div>
+											</label>
+										</a>
+									</li>
 								</ul>
-							</li> -->
+							</li>
 						</ul>
 					</div>
 
@@ -77,13 +117,6 @@
 							<li><a href="#">Camera 3</a></li>
 						</ul>
 					</div>
-<!-- 					<label for="alarm-zones">Cameras:
-						<i class="fa fa-angle-down" aria-hidden="true"></i>
-						<select>
-							<option>Camera 1</option>
-							<option>Camera 2</option>
-						</select>
-					</label> -->
 					<div class="filter-label">
 						<span>Sensors:</span>
 					</div>
@@ -185,6 +218,33 @@
 	</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript">
+			function LightDropDown(el) {
+				this.dd = el;
+				this.placeholder = this.dd.children('span');
+				this.opts = this.dd.find('ul.dropdown > li');
+				this.val = '';
+				this.index = -1;
+				this.initEvents();
+			}
+			LightDropDown.prototype = {
+				initEvents : function() {
+					var obj = this;
+
+					obj.dd.on('click', function(event){
+						$(this).toggleClass('active');
+						return false;
+					});
+					obj.opts.on('click',function(e){
+						e.stopPropagation();
+					});
+				},
+				getValue : function() {
+					return this.val;
+				},
+				getIndex : function() {
+					return this.index;
+				}
+			}
 			function DropDown(el) {
 				this.dd = el;
 				this.placeholder = this.dd.children('span');
@@ -222,13 +282,14 @@
 				var dd1 = new DropDown( $('#dd1') );
 				var dd2 = new DropDown( $('#dd2') );
 				var dd3 = new DropDown( $('#dd3') );
-				var dd4 = new DropDown( $('#dd4') );
+				var dd4 = new LightDropDown( $('#dd4') );
 
 
 
 				$(document).click(function() {
 					// all dropdowns
 					$('.wrapper-dropdown-3').removeClass('active');
+					$('.wrapper-dropdown-4').removeClass('active');
 				});
 
 			});

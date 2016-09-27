@@ -23,7 +23,7 @@ body {
 .container {
 	height: 100%;
 	width: 100%;
-  min-height: 800px;
+    min-height: 800px;
 }
 header {
     position: relative;
@@ -35,7 +35,7 @@ header {
     z-index: 9999;
 }
 header img {
-	  width: 360px;
+	width: 360px;
     padding: 3px;
     float: left;
 }
@@ -44,16 +44,16 @@ header .right-panel {
     padding: 22px;
 }
 .right-panel a {
-	  color: #fff;
-	  padding-right: 15px;
-	  font-size: 14px;
-	  cursor: pointer;
+	color: #fff;
+	padding-right: 15px;
+	font-size: 14px;
+	cursor: pointer;
 }
 .right-panel a:hover {
-	  color: #00aeef;
+	color: #00aeef;
 }
 .right-panel a i {
-	  font-size: 17px;
+	font-size: 17px;
     padding-left: 6px;
 }
 aside {
@@ -70,22 +70,22 @@ aside ul {
     list-style: none;
 }
 aside ul li {
-	  color: #767fa3;
+	color: #767fa3;
     font-size: 15px;
     cursor: pointer;
     padding-bottom: 21px;
 }
 aside ul li:hover {
-	  color: #fff;
+	color: #fff;
     font-size: 15px;
 }
 aside ul li.active {
-	  color: #fff;
+	color: #fff;
     font-size: 15px;
 }
 aside ul li i {
-	  padding-right: 10px;
-	  font-size: 18px;
+	padding-right: 10px;
+	font-size: 18px;
 }
 .filter-panel {
     position: relative;
@@ -96,16 +96,16 @@ aside ul li i {
     font-weight: 100;
 }
 .filter-panel .site-name {
-	  display: inline-block;
-	  padding: 19px 40px;
-	  float: left;
-	  width: 164px;
+	display: inline-block;
+	padding: 19px 40px;
+	float: left;
+	width: 164px;
     font-weight: 400;
     letter-spacing: 1px;
 }
 .filter-panel .site-name span {
-	  color: #fff;
-	  font-size: 16px;
+	color: #fff;
+	font-size: 16px;
 }
 .filter-panel .filter-label {
     display: inline-block;
@@ -115,12 +115,12 @@ aside ul li i {
     font-size: 14px;
 }
 .filter-panel .filters {
-	  padding: 9px;
+	padding: 9px;
 }
 .filter-panel .filters label {
-	  color: #fff;
-	  font-size: 14px;
-	  padding-right: 20px;
+	color: #fff;
+	font-size: 14px;
+	padding-right: 20px;
     letter-spacing: 1px;
 }
 .filter-panel .filters label i {
@@ -192,7 +192,7 @@ aside ul li i {
 .cell.header {
     color: #b7b7b7;
 }
-/* -----custom selectbox ---- */
+/* ----- CUSTOM SELECT BOX ---- */
 #dd4 {
     background: #59caf5;
     text-align: center;
@@ -223,7 +223,7 @@ div#dd4.wrapper-dropdown-4:after {
     left: 0;
     right: 0;
     padding: 10px 12px;
-    width: 170px;
+    width: 175px;
 
 
     /* Styles */
@@ -264,13 +264,11 @@ div#dd4.wrapper-dropdown-4:after {
     text-align: left;
 }
 .wrapper-dropdown-4 .dropdown li ul li {
-    padding: 0;
+    padding-bottom: 5px;
+    font-size: 14px;
 }
 .wrapper-dropdown-4 .dropdown li ul li:first-of-type {
     padding-bottom: 10px;
-}
-.wrapper-dropdown-4 .dropdown li ul li:hover {
-    background: #d9f3fd;
 }
 .wrapper-dropdown-4,
 .wrapper-dropdown-3 {
@@ -413,66 +411,68 @@ div#dd4.wrapper-dropdown-4:after {
     display: block;
 }
 
+/* ---------- END CUSTOM SELECT BOX --------- */
+/* ---------- TOGGLE SWITCH ------------------ */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 41px;
+  height: 22px;
+}
 
-/* No CSS3 support: none */
+/* Hide default HTML checkbox */
+.switch input {display:none;}
 
-/* -----end custom selectbox --- */
-/*.table {
-    min-width: 985px;
-}*/
-/*.table-header {
-    background-color: #393e52;
-  display:table;         
-  width:auto; 
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e6e6e6;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
-.table-header ul {
-    display:table-row;
-    width:auto;
-    clear:both;
-}
-.table-header li{*/
-/*    display: inline-block;
-    margin-right: 8%;
-    margin-left: 8%;
-    width: 87px;
-    padding-top: 10px;
-    padding-bottom: 10px;*/
-/*    display:table-row;
-    width:auto;
-    clear:both;
-    
-    display:table-column;         
-    width:200px;  
-    color: #b7b7b7;
-    font-weight: 400;
-    font-size: 14px;
-}
-.table-body {
-    display:table;         
-    width:auto; 
-}
-.table-body ul {
-    display:table-row;
-    width:auto;
-    clear:both;
-}*/
-/*.table-body li{
-*//*    display:table-row;
-    width:auto;
-    clear:both;*/
 
-/*    display:table-column;         
-    width:200px;  
-    font-weight: 400;
-    font-size: 14px;
-    color: #fff;*/
-/*    margin-left: 8%;
-    overflow: auto;
-    width: 84px;
-    margin-right: 8%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}*/
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 1px;
+    bottom: 1px;
+    box-shadow: 0 0 7px #bbb;
+    background-color: #f8f8f8;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    background-color: #59caf5;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(19px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* ---------- END TOGGLE SWITCH -------------- */
 /* ========== LOGIN PAGE ========= */
 .logo-wrapper {
 	text-align: center;
