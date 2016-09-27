@@ -23,6 +23,7 @@ body {
 .container {
 	height: 100%;
 	width: 100%;
+    min-width: 1280px;
     min-height: 800px;
 }
 header {
@@ -94,12 +95,13 @@ aside ul li i {
     height: 60px;
     z-index: 9999;
     font-weight: 100;
+    min-width: 1005px;
 }
 .filter-panel .site-name {
 	display: inline-block;
 	padding: 19px 40px;
 	float: left;
-	width: 164px;
+	width: 135px;
     font-weight: 400;
     letter-spacing: 1px;
 }
@@ -116,6 +118,8 @@ aside ul li i {
 }
 .filter-panel .filters {
 	padding: 9px;
+    float: right;
+    width: 82%;
 }
 .filter-panel .filters label {
 	color: #fff;
@@ -165,12 +169,26 @@ aside ul li i {
     position: absolute;
     height: 100%;
     left: 275px;
+    min-width: 1005px;
+}
+.left-content-panel {
+    display: inline-block;
+    float: left;
+}
+.right-content-panel {
+    display: inline-block;
+}
+.controlling {
+    display: block;
+    position: relative;
+    background: #393e52;
 }
 .table {
     display: table;
     width: 100%;
     font-size: 14px;
     font-weight: 300;
+    min-width: 1005px;
 }
 .row {
     display: table-row;
