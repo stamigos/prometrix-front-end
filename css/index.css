@@ -118,8 +118,8 @@ aside ul li i {
 }
 .filter-panel .filters {
 	padding: 9px;
-    float: right;
-    width: 82%;
+    float: left;
+    width: 85%;
 }
 .filter-panel .filters label {
 	color: #fff;
@@ -182,6 +182,43 @@ aside ul li i {
     display: block;
     position: relative;
     background: #393e52;
+    padding: 21px 15px;
+    height: 341px;
+}
+.controlling .left-column,
+.controlling .right-column {
+    display: inline-block;
+    float: left;
+    padding-left: 30px;
+}
+.controlling h2 {
+    font-size: 16px;
+}
+.controlling .left-column ul {
+    border-right: 1px solid #999999;
+}
+.controlling ul {
+    display: inline-block;
+    list-style: none;
+    padding-right: 30px;
+}
+.controlling ul li {
+    padding-bottom: 30px;
+}
+.controlling label {
+    float: right;
+}
+.controlling ul li span.title {
+    color: #f2f2f2;
+    font-size: 14px;
+    font-weight: 400;
+    padding-right: 40px;
+}
+.controlling ul li span.value {
+    color: #55bbe4;
+    font-size: 14px;
+    font-weight: 400;
+    float: right;
 }
 .table {
     display: table;
@@ -462,8 +499,8 @@ div#dd4.wrapper-dropdown-4:after {
     width: 20px;
     left: 1px;
     bottom: 1px;
-    box-shadow: 0 0 7px #bbb;
-    background-color: #f8f8f8;
+/*    box-shadow: 0 0 7px #bbb;
+*/    background-color: #b8b8b8;
     -webkit-transition: .4s;
     transition: .4s;
 }

@@ -35,7 +35,7 @@
 							<option>Alarm 2</option>
 						</select>
 					</label> -->
-					<div id="dd4" class="wrapper-dropdown-4" tabindex="1">
+<!-- 					<div id="dd4" class="wrapper-dropdown-4" tabindex="1">
 						<span>Lights</span><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
 						<ul class="dropdown">
 							<li>
@@ -93,13 +93,23 @@
 								</ul>
 							</li>
 						</ul>
+					</div> -->
+					<div class="filter-label">
+						<span>Lights:</span>
 					</div>
-
+					<div id="dd5" class="wrapper-dropdown-3" tabindex="1">
+						<span>Light 1</span>
+						<ul class="dropdown">
+							<li><a href="#">Light 1</a></li>
+							<li><a href="#">Light 2</a></li>
+							<li><a href="#">Light 3</a></li>
+						</ul>
+					</div>
 					<div class="filter-label">
 						<span>Alarm zones:</span>
 					</div>
 					<div id="dd1" class="wrapper-dropdown-3" tabindex="1">
-						<span>Alarm zones</span>
+						<span>Alarm 1</span>
 						<ul class="dropdown">
 							<li><a href="#">Alarm 1</a></li>
 							<li><a href="#">Alarm 2</a></li>
@@ -110,7 +120,7 @@
 						<span>Cameras:</span>
 					</div>
 					<div id="dd2" class="wrapper-dropdown-3" tabindex="1">
-						<span>Cameras</span>
+						<span>Camera 1</span>
 						<ul class="dropdown">
 							<li><a href="#">Camera 1</a></li>
 							<li><a href="#">Camera 2</a></li>
@@ -121,7 +131,7 @@
 						<span>Sensors:</span>
 					</div>
 					<div id="dd3" class="wrapper-dropdown-3" tabindex="1">
-						<span>Sensors</span>
+						<span>Sensor 1</span>
 						<ul class="dropdown">
 							<li><a href="#"><i class="icon-envelope icon-large"></i>Sensor 1</a></li>
 							<li><a href="#"><i class="icon-truck icon-large"></i>Sensor 2</a></li>
@@ -136,13 +146,73 @@
 				<img src="img/last-saved.png"/>
 			</div>
 		</div>
-<!-- 	    <div class="right-content-panel">
+	    <div class="right-content-panel">
 	    	<div class="last-saved">
 	    		<h2>Controlling: Light 1</h2>
 	    		<div class="controlling">
+	    			<div class="left-column">
+	    				<h2>Light status</h2>
+		    			<ul>
+		    				<li>
+		    					<span class="title">LED:</span><span class="value">%</span>
+		    				</li>
+		    				<li>
+		    					<span class="title">Ambient light:</span><span class="value">on</span>
+		    				</li>
+		    				<li>
+		    					<span class="title">Tampering:</span><span class="value">on</span>
+		    				</li>
+		    				<li>
+		    					<span class="title">Temperature:</span><span class="value">on</span>
+		    				</li>
+		    				<li>
+		    					<span class="title">Digital input:</span><span class="value">on</span>
+		    				</li>
+		    			</ul>
+	    			</div>
+	    			<div class="right-column">
+	    				<h2>Manual control</h2>
+	    				<ul>
+	    					<li>
+	    						<span class="title">LED</span>
+								<label class="switch">
+									  <input type="checkbox">
+									  <div class="slider round"></div>
+								</label>
+	    					</li>
+	    					<li>
+	    						<span class="title">Energy save</span>
+								<label class="switch">
+									  <input type="checkbox">
+									  <div class="slider round"></div>
+								</label>
+	    					</li>
+	    					<li>
+	    						<span class="title">Boost</span>
+								<label class="switch">
+									  <input type="checkbox">
+									  <div class="slider round"></div>
+								</label>
+	    					</li>
+	    					<li>
+	    						<span class="title">Strobe</span>
+								<label class="switch">
+									  <input type="checkbox">
+									  <div class="slider round"></div>
+								</label>
+	    					</li>
+	    					<li>
+	    						<span class="title">Digital output</span>
+								<label class="switch">
+									  <input type="checkbox">
+									  <div class="slider round"></div>
+								</label>
+	    					</li>
+	    				</ul>
+	    			</div>
     			</div>
 	    	</div>
-	    </div> -->
+	    </div>
 	        <div class="table">
 	            <div class="row header">
 	                <div class="cell header">Event</div>
@@ -284,7 +354,7 @@
 				var dd1 = new DropDown( $('#dd1') );
 				var dd2 = new DropDown( $('#dd2') );
 				var dd3 = new DropDown( $('#dd3') );
-				var dd4 = new LightDropDown( $('#dd4') );
+				var dd4 = new LightDropDown( $('#dd5') );
 
 
 
